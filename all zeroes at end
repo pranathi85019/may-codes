@@ -1,0 +1,46 @@
+ou are given an array of integers of size N. Your task is to move all the zeros in the array to the end while maintaining the relative order of the non-zero elements.
+
+Input Format
+
+First line contains an integer N — size of the array Second line contains N space-separated integers
+
+Constraints
+
+1 ≤ N ≤ 10⁵ -10⁹ ≤ array[i] ≤ 10⁹
+
+Output Format
+
+Print the modified array after moving all zeros to the end
+
+Sample Input 0
+
+8
+1 0 2 3 0 4 0 1
+Sample Output 0
+
+1 2 3 4 1 0 0 0
+Sample Input 1
+
+6
+1 2 3 4 5 6
+Sample Output 1
+
+1 2 3 4 5 6
+
+PROGRAM:
+import java.util.*;
+class Solution {
+public static void main(String[] args){
+    Scanner in=new Scanner(System.in);
+    int n=in.nextInt();
+    int[] a=new int[n];
+    for(int i=0;i<n;i++){
+    a[i]=in.nextInt();}
+        for(int i=0;i<n;i++){
+            if(a[i]!=0){
+                System.out.print(a[i]+" ");
+            }}
+    for(int i=0;i<n;i++){
+            if(a[i]==0){
+                System.out.print(a[i]+" ");
+            }}}}
