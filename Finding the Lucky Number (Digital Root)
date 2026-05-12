@@ -1,0 +1,89 @@
+Finding the Lucky Number (Digital Root)
+
+You are given a positive integer N. Your task is to repeatedly sum its digits until only a single digit remains. This final single digit is called the Lucky Number or Digital Root of the number.
+
+Instead of using repeated loops, try to solve this efficiently using the mathematical property of numbers based on divisibility by 9.
+
+Input Format
+
+A single integer N
+
+Constraints
+
+Print a single integer — the digital root of N
+
+Output Format
+
+0 ≤ N ≤ 10^18 N contains only digits Output will always be a single digit (0–9)
+
+Sample Input 0
+
+9875
+Sample Output 0
+
+2
+Explanation 0
+
+9 + 8 + 7 + 5 = 29 2 + 9 = 11 1 + 1 = 2
+
+Sample Input 1
+
+12345
+Sample Output 1
+
+6
+Sample Input 2
+
+0
+Sample Output 2
+
+0
+Submissions: 1
+Max Score: 20
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+=0
+1
+​
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args) {
+7
+       Scanner in=new Scanner(System.in);
+8
+        long n = in.nextLong(); //input //n=12345
+9
+        int res;
+10
+        
+11
+        if(n==0){          //f
+12
+        res=0;
+13
+        }else if(n%9==0){  //12345%9==0   //f   //   6
+14
+              res = 9;   //ne
+15
+          }
+16
+        else{
+17
+            res = (int)(n%9);    //res=6
+18
+        }   
+19
+        System.out.println(res);   //out put res
+20
+    }}
