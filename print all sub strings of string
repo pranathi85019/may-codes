@@ -1,0 +1,81 @@
+Print All Substrings of a String
+
+Given a string S, print all possible substrings of the string in the order they are generated.
+
+A substring is a continuous part of a string.
+
+After printing all substrings, print the total number of substrings.
+
+Input Format
+
+A single string S
+
+Constraints
+
+1 <= S.length() <= 100
+
+Output Format
+
+Print all substrings line by line. * In the last line, print:
+
+`text Total Substrings = count
+
+Sample Input 0
+
+text
+ab
+Sample Output 0
+
+t
+te
+tex
+text
+e
+ex
+ext
+x
+xt
+t
+Total Substrings = 10
+Sample Input 1
+
+text
+dog
+Sample Output 1
+
+t
+te
+tex
+text
+e
+ex
+ext
+x
+xt
+t
+Total Substrings = 10
+Submissions: 1
+Max Score: 20
+Difficulty: Medium
+Rate This Challenge:
+ 
+
+import java.io.*;
+import java.util.*;
+public class Solution {
+  public static void main(String[] args) {
+    Scanner in=new Scanner(System.in);
+
+        String s=in.nextLine();//abcd\0
+
+        int count=0;          //0123
+        for(int i=0;i<s.length();i++){ //i=0 0<4 0123
+            for(int j=i+1;j<=s.length();j++){//(0,1)->a
+            System.out.println(s.substring(i,j));
+
+                count++;//1
+
+            }}
+     System.out.print("Total Substrings = "+count);
+
+                         }}
