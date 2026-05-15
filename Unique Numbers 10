@@ -1,0 +1,76 @@
+Unique Numbers 10
+
+Given two integers L and R, print all numbers between L and R (inclusive) which contain all unique digits. A number is called unique if no digit repeats within the number.
+
+Input Format
+
+• Two space-separated integers: L and R
+
+Constraints
+
+• 1 ≤ L ≤ R ≤ 10⁴
+
+Output Format
+
+• Print all unique numbers between L and R, separated by a space, in a single line.
+
+Sample Input 0
+
+98 102
+Sample Output 0
+
+98 102
+Explanation 0
+
+Explanation: 99, 100, 101 all have repeated digits.
+
+Sample Input 1
+
+120 130
+Sample Output 1
+
+120 123 124 125 126 127 128 129 130
+Explanation 1
+
+Explanation: 121 and 122 have repeated digits.
+------------------------------------------------
+(infosys,TCS,wipro,cognizant,HCLTech,persistent system,mind tree)
+
+------loops,number manipulation,basic
+
+INPUT:
+98 102 --->l=98 r=102
+
+98,99,100,101,102---->o/p:98,102
+
+99,100,101---->the digits are repeating in each number.
+
+-----------------------------------------
+import java.util.*;
+class Solution{
+public static boolean = undig(int n){
+   boolean[] seen = new boolean[10];  //0-9
+  while(n>0){
+   int dig = n%10;
+    if(seen[dig]){
+      return false;
+    }
+      seen[dig] = true;
+      n=n/10;
+    }
+    return true;}
+  public static void main(String[] args){
+    Scanner in=new Scanner(System.in);
+    int l = in.nextInt();  //l=20
+    int r = in.nextInt();  //r=30
+    for(int i=l;i<=r;i++){
+     if(undig(i)){
+    System.out.print(i + " ");}}}}
+
+   
+
+
+
+
+
+
