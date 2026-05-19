@@ -1,0 +1,78 @@
+problem:thershold breaking point(TCS,HCL,accenture,wipro,infosys)
+
+-->breaking point
+-->first exceeding limit
+-->load threshold problem
+Find first index where prefix sum exceeds threshold.
+
+Input Format
+
+n, threshold array
+
+Constraints
+
+1 ≤ n ≤ 10⁵
+
+Output Format
+
+index or -1
+
+Sample Input 0
+
+5 10
+2 3 4 5 6
+Sample Output 0
+
+3
+Sample Input 1
+
+4 5
+1 2 3 4
+Sample Output 1
+
+2
+
+input:
+5 10 n=5 // size threshold value=10
+2 3 4 5 6 //elements
+
+0 1  2 3 4 
+
+0+2=2
+2>10 no
+2+3=5
+5>10 no
+5+4 = 9
+9>10 no
+9+5=14
+14>10 yes
+print according to the index value 
+
+so the output will be :3
+
+import java.util.*;
+public class solution{
+public static void main(String[] args){
+ Scanner in=new Scanner(System.in);
+ int n=in.nextInt();
+ int t=in.nextInt();
+ int sum=0;
+ for(int i=0;i<n;i++){
+ sum+=in.nexInt();
+if(sum>t){
+System.out.println(i);
+return;
+}
+}
+System.out.println(-1);
+}}
+
+
+
+
+
+
+
+
+
+
